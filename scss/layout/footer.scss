@@ -1,0 +1,58 @@
+.footer__wave {
+    height: 52px;
+    background: url("../images/bg-footer-top-mobile.svg") no-repeat 100% / 100% 100%;
+
+    @include big-tablet {
+        height: 158px;
+        background-image: url("../images/bg-footer-top-desktop.svg");
+    }
+}
+
+.footer-wrapper {
+    @extend %margin-lr;
+    width: 86%;
+    max-width: 1200px;
+
+    display: grid;
+    justify-content: center;
+
+    @include big-tablet {
+        grid-template-columns: repeat(2, 43%);
+        row-gap: 3.5rem;
+        justify-content: space-between;
+        padding-top: 7.4rem;
+    }
+}
+
+.info {
+    order: 2;
+    margin-bottom: 1.8rem;
+    @include big-tablet {
+        order: 1;
+        margin-bottom: 0;
+    }
+}
+
+.newsletter {
+    order: 1;
+    margin-top: 2.5rem;
+    margin-bottom: 6.4rem;
+    @include big-tablet {
+        order: 2;
+        margin-bottom: 0;
+    }
+}
+
+.social {
+    order: 3;
+    @include big-tablet {
+        grid-column: 1/-1;
+    }
+}
+
+.attribution {
+    order: 4;
+    @include big-tablet {
+        grid-column: 1/-1;
+    }
+}

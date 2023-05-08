@@ -1,0 +1,16 @@
+.navbar {
+    @include flex (row, nowrap, space-between, center);
+    @include box-size (85%, auto);
+    max-width: 1300px;
+    @include tablet { @include box-size (90%, auto); }
+    
+    &__logo {
+        width: 6rem;
+
+        @include tablet { width: 7.5rem; }
+        @include big-tablet { width: 11rem; }
+        @include desktop { width: 15rem; }
+
+        img { vertical-align: middle; }
+    }
+}

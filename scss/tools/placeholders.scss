@@ -1,0 +1,26 @@
+%heading {
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+%text-button {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 700;
+    // creo que debería ir en otro placeholder
+    display: inline-block;
+}
+
+%margin-lr {
+    margin-left: auto;
+    margin-right: auto;
+}
+%text-align-left {
+    text-align: left;
+}
+%text-align-right {
+    text-align: right;
+}
+%text-align-center {
+    text-align: center;
+}

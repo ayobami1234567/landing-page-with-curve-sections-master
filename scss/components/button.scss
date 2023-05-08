@@ -1,0 +1,32 @@
+.button {
+    @include button (12px, 12px, 38px, 20px);
+    background-color: $pink;
+    color: $very-pale-blue;
+    box-shadow: 0 4px 8px silver;
+
+    @include big-tablet {
+        width: 400px;
+        @include button (20px, 25px, 38px, 40px);
+    }
+}
+
+.button--secondary {
+    @include button (10px, 5px, 14px, 14px);
+    color: $light-pink;
+    border: 1px solid;
+    box-shadow: none;
+
+    @include big-tablet {
+        @include button (16px, 8px, 30px, 20px);
+        &:hover { box-shadow: 0 0 8px $light-pink; transition: box-shadow .3s, color .3s;}
+        font-weight: 400;
+        border: 2px solid
+    }
+}
+
+.button--tertiary {
+    @include button (15px, 15px, 44px, 6px);
+    background-color: $pink;
+    color: $very-pale-blue;
+    border-style: none;
+}

@@ -1,0 +1,28 @@
+@mixin box-size ($width: 100%, $height: 100%) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex ($direction:row, $break:nowrap, $alignWidth:center, $alignHeight:center) {
+    display: flex;
+    flex-flow: $direction $break;
+    justify-content: $alignWidth;
+    align-items: $alignHeight;
+}
+
+@mixin button ($font-size, $padding-tb, $padding-lr, $border-radius) {
+    font-size: $font-size;
+    padding: $padding-tb $padding-lr;
+    border-radius: $border-radius;
+    @extend %text-button;
+    opacity: 1;
+    transition: opacity .5s;
+
+    @include big-tablet {
+        &:hover {
+            cursor: pointer;
+            opacity: .5;
+            transition: opacity .5s;
+        }
+    }
+}

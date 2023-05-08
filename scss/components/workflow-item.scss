@@ -1,0 +1,31 @@
+.workflow__item {
+    &:nth-child(odd) {
+        background-color: $very-pale-blue;
+    }
+    &:nth-child(2),
+    &:nth-child(6) {
+        background-color: $very-pale-blue;
+    }
+
+    &-wrapper {
+        line-height: 1.5;
+    }
+
+    &-content {
+        @include desktop {
+            text-align: left;
+        }
+    }
+
+    &-subtitle {
+        @extend %heading;
+        font-size: 1.3rem;
+        @include tablet { font-size: 1.8rem; }
+        @include desktop { font-size: 2.5rem; }
+    }
+
+    &-paragraph {
+        font-size: 14px;
+        @include tablet { font-size: 16px; }
+    }
+}

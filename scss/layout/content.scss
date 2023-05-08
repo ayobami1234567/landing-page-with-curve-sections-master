@@ -1,0 +1,193 @@
+// section-1
+.intro {
+    @include box-size (80%);
+    max-width: 1152px;
+    @extend %margin-lr;
+    @extend %text-align-center;
+    line-height: 1.5;
+    margin-bottom: 7.3rem;
+
+    &__title {
+        @extend %heading;
+        font-size: 1.5rem;
+        margin-bottom: 1.4rem;
+        @include big-tablet { font-size: 2.2rem; }
+        @include desktop { font-size: 3rem; }
+    }
+
+    &__paragraph {
+        @extend %margin-lr;
+        font-size: 14px;
+        margin-bottom: 3rem;
+        @include big-tablet { font-size: 16px; @include box-size (55%); }
+        @include desktop { font-size: 1.25rem;  }
+    }
+
+    &__button {
+        margin-bottom: 6.2rem;
+        @include desktop { margin-bottom: 6.9rem; }
+    }
+
+    &__illustration {
+        @include desktop {
+            width: 1020px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+// section-2
+.statistics {
+    @include box-size (50%);
+    max-width: 879px;
+    @extend %margin-lr;
+    margin-bottom: 1.5rem;
+    @include flex (column, nowrap, center, stretch);
+    @include tablet {
+        @include box-size (61%);
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+    }
+
+    &__item {
+        &:first-child {
+            margin-bottom: 97px;
+            @include desktop { margin-bottom: 0; }
+        }
+        &-icon {
+            margin: 0 0 4px 0;
+
+            img { 
+                width: 30px;
+                @include big-tablet { width: 40px; }
+                @include desktop { width: 48px; }
+            }
+        }
+        &-number { margin: 0 0 14px 0; }
+    }
+}
+
+// section-3
+.workflow {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 3.4rem;
+    @include desktop {
+        margin-bottom: 10.2rem;
+    }
+
+    &__wave {
+        &:nth-child(1) {
+            height: 7rem;
+            background: url("../images/bg-section-top-mobile-1.svg") no-repeat 100% / 100% 100%;
+            @include big-tablet {
+                height: 165px;
+                background-image: url("../images/bg-section-top-desktop-1.svg");
+            }
+        }
+        &:nth-child(3) {
+            height: 50px;
+            background: url("../images/bg-section-bottom-mobile-1.svg") no-repeat 100% / 100% 100%;
+            @include big-tablet {
+                height: 139px;
+                background-image: url("../images/bg-section-bottom-desktop-1.svg");
+            }
+        }
+        &:nth-child(5) {
+            height: 100px;
+            background: url("../images/bg-section-top-mobile-2.svg") no-repeat 100% / 100% 100%;
+            @include big-tablet {
+                height: 156px;
+                background-image: url("../images/bg-section-top-desktop-2.svg");
+            }
+        }
+        &:nth-child(7) {
+            height: 100px;
+            background: url("../images/bg-section-bottom-mobile-2.svg") no-repeat 100% / 100% 100%;
+            @include big-tablet {
+                height: 139px;
+                background-image: url("../images/bg-section-bottom-desktop-2.svg");
+            }
+        }
+    }
+
+    &__item {
+
+        &:nth-child(2) {
+            padding-top: 5.15rem;
+            padding-bottom: 2.6rem;
+            @include big-tablet {
+                .workflow__item-illustration { order: 2; }
+                .workflow__item-content { order: 1; }
+            }
+        }
+
+        &:nth-child(4) {
+            margin-top: 8.8rem;
+            margin-bottom: 6.75rem;
+            @include big-tablet {
+                margin-top: 13.5rem;
+            }
+        }
+
+        &:nth-child(6) {
+            padding-top: 1.2rem;
+            padding-bottom: 6.4rem;
+            @include big-tablet {
+                padding-bottom: 2rem;
+                .workflow__item-illustration { order: 2; }
+                .workflow__item-content { order: 1; }
+            }
+        }
+
+        &-wrapper {
+            max-width: 1157px;
+            @include box-size (85%);
+            @extend %margin-lr;
+            @extend %text-align-center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include big-tablet {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        &-illustration {
+            max-width: 515px;
+            @include box-size (81%);
+            @extend %margin-lr;
+            margin-bottom: 4.4rem;
+
+            @include desktop {
+                margin: 0;
+            }
+        }
+
+        &-content {
+            max-width: 490px;
+        }
+
+        &-subtitle {
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+// section-4
+.cta {
+    @include box-size (85%);
+    @extend %margin-lr;
+    margin-bottom: 15.7rem;
+    @include desktop {
+        margin-bottom: 11rem;
+    }
+}

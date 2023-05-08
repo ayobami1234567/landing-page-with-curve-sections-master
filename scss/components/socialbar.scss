@@ -1,0 +1,15 @@
+.social {
+    &__icon {
+        display: inline-block;
+        font-size: 1.6rem;
+        color: #fff;
+        margin-right: 1rem;
+        transition: color .5s;
+        @include big-tablet {
+            font-size: 2rem;
+            cursor: pointer;
+            &:hover { color: $pink; transition: color .5s; }
+        }
+        @include desktop { font-size: 2.25rem; }
+    }
+}
